@@ -14,20 +14,24 @@
 </head>
 
 <body id="allRounder">
-
     <!-- header -->
     <header id="allRounder_page_header">
         <img src="assets/images/logo_light.png" alt="logo du site" />
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Langues
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="bouton français">Français</a></li>
-                <li><a class="dropdown-item" href="bouton Anglais">Anglais</a></li>
-                <li><a class="dropdown-item" href="bouton Danois">Danois</a></li>
-            </ul>
+        <div id="bar_and_dropdown">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Langues
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="bouton français">Français</a></li>
+                    <li><a class="dropdown-item" href="bouton Anglais">Anglais</a></li>
+                    <li><a class="dropdown-item" href="bouton Danois">Danois</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -51,13 +55,12 @@
     </nav>
 
     <main id="allRounder_main">
-
         <!-- TOGGLE BY CLICKING ON "PRESENTATION" BUTTON -->
         <!-- article intro -->
         <article id="presentation">
             <h2>
-                Bonjour, je suis développeur web <br><span class="red">"full stack"</span> en
-                apprentissage.
+                Bonjour, je suis développeur web <br /><span class="red">"full stack"</span>
+                en apprentissage.
             </h2>
 
             <p>
@@ -98,45 +101,100 @@
             </div>
         </article>
 
+        <!-- TOGGLE BY CLICKING ON "PORTFOLIO" BUTTON   -->
+        <!-- slider -->
+        <article class="container_cards">
+            <h2>Mon portfolio</h2>
+            <p>Voici mes projets, il n'y en à pas encore beaucoup pour le moment...</p>
+            <!-- card1 -->
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card_number">
+                        <img src="assets/images/imageportefolio.png" alt="Mon dernier essai en portefolio"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h3>Projet sur Figma</h3>
+                            <p>Ceci est l'un de mes essais à maquetter un projet et à le prototyper.</p>
+                            <a href="https://www.figma.com/file/geowViYe1lZoFlNCVKDSrX/Untitled">Cliquez pour le
+                                voir!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card2 -->
+                <div class="col-12 col-md-6 col-lg-4" id="card">
+                    <div class="card_number">
+                        <img src="assets/images/portfolio 2.png" alt="Mon premier essai sur Figma" class="card-img-top">
+                        <div class="card-body">
+                            <h3>Projet sur Figma</h3>
+                            <p>Mon premier essai sur Fima. Avec pour objectif de maquetter en mobile, tablette et
+                                ordinateur.</p>
+                            <a href="https://www.figma.com/file/eA5ZPdGogaKYld2Hx8cV75/Untitled">Cliquez pour le
+                                voir!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card_number">
+                        <img src="assets/images/petstore.png" alt="Maquette pour un projet d'animalerie"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h3>Projet sur Figma</h3>
+                            <p>Un projet pour mélanger le front et le back end. Ceci est le prototype à destination
+                                d'une animalerie.</p>
+                            <a href="https://www.figma.com/file/u7Kz77gDsgzcRvv99YfRpf/petstore">Cliquez pour le
+                                voir!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- TOGGLE BY CLICKING ON "ME CONTACTER" BUTTON   -->
         <!-- email -->
         <article class="email">
             <form action="">
                 <h2>Me contacter</h2>
-                <p>N'hésitez pas à m'envoyer un petit message, je ferai de mon mieux pour vous répondre au plus vite.
+                <p>
+                    N'hésitez pas à m'envoyer un petit message, je ferai de mon mieux
+                    pour vous répondre au plus vite.
                 </p>
-                
+
                 <!-- name -->
                 <label for="exampleInputEmail1" class="form-label">Nom</label>
                 <div class="form-floating">
                     <input type="text" aria-label="First name" id="floatingInput" class="form-control"
-                        placeholder="ex: Dupont" required>
-                    <label for="floatingInput">ex: Dupont</label>
+                        placeholder="ex: Dupont" required />
+                    <label id="email_float_item" for="floatingInput">ex: Dupont</label>
                 </div>
+
                 <label for="exampleInputEmail1" class="form-label">Prénom</label>
                 <div class="form-floating">
                     <input type="text" aria-label="Last name" id="floatingInput" class="form-control"
-                        placeholder="ex: Jean" required>
-                    <label for="floatingInput">ex: Jean</label>
+                        placeholder="ex: Jean" required />
+                    <label id="email_float_item" for="floatingInput">ex: Jean</label>
                 </div>
-                
+
                 <!-- email-->
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="ex: dupont@example.com"
-                        required>
-                    <label for="floatingInput">ex: dupont@example.com</label>
+                        required />
+                    <label id="email_float_item" for="floatingInput">ex: dupont@example.com</label>
                 </div>
-                
+
                 <!-- message -->
                 <label for="exampleInputEmail1" class="form-label">Message</label>
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Dites-moi... &#128522;</label>
+                    <label id="email_float_item" for="floatingTextarea">Dites-moi... &#128522;</label>
                 </div>
-                <input class="btn btn-dark" type="submit" value="Submit">
+                <input class="btn btn-dark btn-outline-light" type="submit" value="Submit" />
             </form>
-            <svg></svg>
         </article>
+
     </main>
 
     <!-- scripts -->

@@ -3,6 +3,8 @@
     --secondary-color: black;
     --light-mode: white;
     --hover: #f7000027;
+    --box-shadow: #ccc2c285;
+    --box-shadow-active: #5b4e4e85;
 }
 
 * {
@@ -139,85 +141,6 @@ body {
     width: 40%;
 }
 
-/* home page tablet breakpoint */
-@media (min-width: 830.98px) {
-    .form-check .form-check-input {
-        height: 4.5em;
-        width: 10em;
-    }
-
-    #dropdownMenuButton1 {
-        font-size: 2.8em;
-    }
-
-    .dropdown-item {
-        font-size: 2em;
-        width: 7em;
-        height: 2em;
-    }
-
-    #logo {
-        width: 70%;
-    }
-
-    .intro_page_btn {
-        font-size: 3em;
-        margin-bottom: 1em;
-    }
-
-    #socialMedia h2 {
-        font-size: 3.2em;
-        margin-top: 1em;
-    }
-}
-
-/* home page desktop breakpoint */
-@media (min-width: 1199.98px) {
-
-    #intro_page_header {
-        min-width: 25%;
-        width: 20%;
-        margin: 2%;
-        position: absolute;
-    }
-
-    .form-check .form-check-input {
-        height: 4em;
-        width: 8em;
-    }
-
-    #dropdownMenuButton1 {
-        font-size: 2.3em;
-    }
-
-    #logo {
-        width: 15%;
-        margin: 2% 0% 5% 75%;
-        border: 3px dotted var(--secondary-color);
-    }
-
-    .intro_page_btn {
-        font-size: 2.5em;
-        margin-bottom: 1em;
-    }
-
-    .intro_page_btn:hover {
-        margin-inline: 40%;
-        background: var(--primary-color);
-    }
-
-    #socialMedia h2 {
-        font-size: 2.5em;
-    }
-
-    #socialMedia_logo {
-        margin: 0% 20% 5% 20%;
-    }
-
-    #socialMedia_logo a img {
-        width: 30%;
-    }
-}
 
 /* AllRounder page - intro */
 
@@ -229,10 +152,10 @@ body {
 
 /* header is fixed in "presentation" / "portfolio" and "me contacter"*/
 #allRounder_page_header {
-    width: 95%;
-    margin: 3%;
+    width: 92%;
+    margin: 3% ;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     flex-direction: row;
 }
 
@@ -242,6 +165,19 @@ body {
     float: left;
 }
 
+#bar_and_dropdown{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-check .form-check-input {
+    height: 2em;
+    width: 3.5em;
+}
+.dropdown{
+    font-size: 0.7em;
+    margin-left: 5%;
+}
 /* breacrumb nav is fixed */
 .breadcrumb {
     width: 95%;
@@ -311,10 +247,43 @@ a img {
     width: 60%;
     height: 70%;
 }
+
+/* PORTFOLIO */
+/* 3rd article = .container_cards */
+
+.container_cards{
+    display: none;
+}
+
+.card_number{
+    border: 0.1em solid var(--secondary-color);
+    margin-block: 4%;
+}
+.card-body{
+    padding: 3%;
+    height: 10em;
+}
+
+.card-body h4{
+    text-decoration:underline var(--primary-color);
+}
+
+.card-body a{
+    padding: 1%;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.card-body a:hover{
+    border: 0.1em solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
 /* MECONTACTER */
-/* 3rd article = .email */
+/* 4th article = .email */
 .email{
- width: 92%;
+    width: 92%;
+    display: none;
 }
 
 .email h2{
@@ -327,4 +296,167 @@ a img {
 
 .email label{
     margin-block: 3%;
+}
+
+.email .form-control{
+    font-size: 1.6em;
+}
+
+#email_float_item{
+    margin: 0;
+}
+
+/* styling submmit button */
+.email .btn{
+    margin: 10% 0% 0% 45%;
+    padding-inline: 20%;
+    font-size: 1.3em;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em var(--box-shadow);
+    display: flex;
+}
+
+.email .btn:hover{
+    border: 0.1em solid var(--secondary-color); 
+    }
+
+.email .btn:focus{
+    color: var(--light-mode); 
+    background-color: var(--primary-color);
+    border: var(--primary-color); 
+    box-shadow: 0.1em 0.1em 0.1em 0.1em var(--box-shadow-active);
+    }
+
+
+    /* home page tablet breakpoint */
+@media (min-width: 830.98px) {
+
+        /* HOME PAGE */
+    .form-check .form-check-input {
+        height: 4.5em;
+        width: 10em;
+    }
+
+    #dropdownMenuButton1 {
+        font-size: 2.8em;
+    }
+
+    .dropdown-item {
+        font-size: 2em;
+        width: 7em;
+        height: 2em;
+    }
+
+    #logo {
+        width: 70%;
+    }
+
+    .intro_page_btn {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    #socialMedia h2 {
+        font-size: 3.2em;
+        margin-top: 1em;
+    }
+
+        /* ALLROUNDER HEADER */
+        .form-check .form-check-input {
+            height: 3.3em;
+            width: 7em;
+        }
+        #allRounder_page_header button{
+            font-size: 2.6em;
+        }
+        .breadcrumb li{
+            font-size: 2em;
+        }
+        /* PORTFOLIO */
+        
+        .container_cards h2{
+            font-size: 3.2em; 
+        }
+        .container_cards p{
+            font-size: 2em;
+        }
+
+        .card-body{
+            height: 18em;
+        }
+
+        .card-body h3{
+            font-size: 2em;
+        }
+        .card-body p{
+            font-size: 1.7em;
+        }
+        .card-body a{
+            font-size: 1.7em;
+        }
+    
+}
+
+/* home page desktop breakpoint */
+@media (min-width: 1199.98px) {
+
+    /* HOME PAGE */
+    #intro_page_header {
+        min-width: 25%;
+        width: 20%;
+        margin: 2%;
+        position: absolute;
+    }
+
+    .form-check .form-check-input {
+        height: 4em;
+        width: 8em;
+    }
+
+    #dropdownMenuButton1 {
+        font-size: 2.3em;
+    }
+
+    #logo {
+        width: 15%;
+        margin: 2% 0% 5% 75%;
+        border: 3px dotted var(--secondary-color);
+    }
+
+    .intro_page_btn {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+
+    .intro_page_btn:hover {
+        margin-inline: 40%;
+        background: var(--primary-color);
+    }
+
+    #socialMedia h2 {
+        font-size: 2.5em;
+    }
+
+    #socialMedia_logo {
+        margin: 0% 20% 5% 20%;
+    }
+
+    #socialMedia_logo a img {
+        width: 30%;
+    }
+
+    /* ALLROUNDER HEADER */
+    /* ALLROUNDER HEADER */
+    .form-check .form-check-input {
+        height: 3.3em;
+        width: 7em;
+    }
+    #allRounder_page_header button{
+        font-size: 2.6em;
+    }
+    .breadcrumb li{
+        font-size: 2em;
+        margin-inline: 5%;
+    }
+
+
 }
