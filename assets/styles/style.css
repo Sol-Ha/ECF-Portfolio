@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #e43131;
+    --secondary-color: black;
+    --light-mode: white;
+    --hover: #f7000027;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* all browsers have different margin and padding settings */
+
+body {
+    min-width: 45vh;
+    min-height: 100vh;
+    font-family: 'Yanone Kaffeesatz';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* home page = header */
+
+#intro_page_header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+/* header nav */
+/* modification color and size bootstrap = switch */
+.form-check .form-check-input {
+    height: 2.5em;
+    width: 5em;
+    border-color: var(--secondary-color);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3'/></svg>");
+}
+
+.form-switch .form-check-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3'/></svg>");
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--secondary-color);
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
+/* modification color and size bootstrap = dropdown menu */
+
+#dropdownMenuButton1 {
+    font-size: 1.4em;
+    background-color: var(--secondary-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--light-mode);
+}
+
+#dropdownMenuButton1:focus {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.dropdown-menu {
+    border-color: var(--secondary-color);
+}
+
+/* home page = main*/
+#logo {
+    width: 100%;
+}
+
+#index_main {
+    width: 100%;
+    text-align: center;
+}
+
+.intro_page_article {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_page_btn {
+    list-style: none;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.intro_page_btn a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.red {
+    color: var(--primary-color);
+}
+
+.intro_page_btn:hover {
+    margin-inline: 20%;
+    background: var(--primary-color);
+}
+
+.intro_page_btn:hover a {
+    color: var(--light-mode);
+}
+
+.intro_page_btn:hover span {
+    color: var(--secondary-color);
+}
+
+/* footer */
+#socialMedia {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+#socialMedia h2 {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+#socialMedia_logo {
+    margin-block: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#socialMedia_logo a img {
+    width: 40%;
+}
+
+/* home page tablet breakpoint */
+@media (min-width: 830.98px) {
+    .form-check .form-check-input {
+        height: 4.5em;
+        width: 10em;
+    }
+
+    #dropdownMenuButton1 {
+        font-size: 2.8em;
+    }
+
+    .dropdown-item {
+        font-size: 2em;
+        width: 7em;
+        height: 2em;
+    }
+
+    #logo {
+        width: 70%;
+    }
+
+    .intro_page_btn {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    #socialMedia h2 {
+        font-size: 3.2em;
+        margin-top: 1em;
+    }
+}
+
+/* home page desktop breakpoint */
+@media (min-width: 1199.98px) {
+
+    #intro_page_header {
+        min-width: 25%;
+        width: 20%;
+        margin: 2%;
+        position: absolute;
+    }
+
+    .form-check .form-check-input {
+        height: 4em;
+        width: 8em;
+    }
+
+    #dropdownMenuButton1 {
+        font-size: 2.3em;
+    }
+
+    #logo {
+        width: 15%;
+        margin: 2% 0% 5% 75%;
+        border: 3px dotted var(--secondary-color);
+    }
+
+    .intro_page_btn {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+
+    .intro_page_btn:hover {
+        margin-inline: 40%;
+        background: var(--primary-color);
+    }
+
+    #socialMedia h2 {
+        font-size: 2.5em;
+    }
+
+    #socialMedia_logo {
+        margin: 0% 20% 5% 20%;
+    }
+
+    #socialMedia_logo a img {
+        width: 30%;
+    }
+}
+
+/* AllRounder page - intro */
+
+#allRounder {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* header is fixed in "presentation" / "portfolio" and "me contacter"*/
+#allRounder_page_header {
+    width: 95%;
+    margin: 3%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#allRounder_page_header img {
+    width: 30%;
+    border: dotted 1px var(--secondary-color);
+    float: left;
+}
+
+/* breacrumb nav is fixed */
+.breadcrumb {
+    width: 95%;
+    list-style: none;
+    margin: 2%;
+    padding-block: 2%;
+    border-block: 0.1em solid var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+#allRounder_main {
+    width: 92%;
+    margin: 5%;
+}
+
+/* PRESENTATION */
+/* 1st article = #intro */
+#presentation {
+    margin: 2%;
+    margin-bottom: 15%;
+    padding-inline: 3%;
+    border-left: solid var(--primary-color);
+    /* toggle with JS */
+    display: none;
+}
+
+#presentation h2 {
+    font-size: 1.8em;
+}
+
+#presentation p {
+    font-size: 1em;
+}
+
+/* 2nd article = #showcase */
+#tools {
+    margin: 2%;
+    padding-inline: 3%;
+    border-right: solid var(--primary-color);
+    text-align: right;
+/* toggle with JS */
+    display: none;
+}
+
+#tools_grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+}
+
+a img {
+    width: 60%;
+    height: 70%;
+}
+/* MECONTACTER */
+/* 3rd article = .email */
+.email{
+ width: 92%;
+}
+
+.email h2{
+    font-size: 1.8em;
+}
+
+.email p {
+    font-size: 1em;
+}
+
+.email label{
+    margin-block: 3%;
+}

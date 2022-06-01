@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;400&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Portfolio index</title>
+</head>
+
+<body id="allRounder">
+
+    <!-- header -->
+    <header id="allRounder_page_header">
+        <img src="assets/images/logo_light.png" alt="logo du site" />
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Langues
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="bouton français">Français</a></li>
+                <li><a class="dropdown-item" href="bouton Anglais">Anglais</a></li>
+                <li><a class="dropdown-item" href="bouton Danois">Danois</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- navigation bar -->
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="index.html"><span class="red">Home</span></a>
+            </li>
+            <li>></li>
+            <li>
+                <a href="allRounder.html">Présentation</a>
+            </li>
+            <li>></li>
+            <li>
+                <a href="allRounder.html">Portfolio</a>
+            </li>
+            <li>></li>
+            <li><a href="allRounder.html">Me contacter</a></li>
+        </ul>
+    </nav>
+
+    <main id="allRounder_main">
+
+        <!-- TOGGLE BY CLICKING ON "PRESENTATION" BUTTON -->
+        <!-- article intro -->
+        <article id="presentation">
+            <h2>
+                Bonjour, je suis développeur web <br><span class="red">"full stack"</span> en
+                apprentissage.
+            </h2>
+
+            <p>
+                Je me suis convertie après avoir mûrement réfléchit à un métier qui
+                mêlerait mes compétences acquises au travail, mais aussi dans la vie
+                privé.
+            </p>
+            <p>
+                Je souhaitais un métier dans lequel je pourrais créer du contenu
+                accessible pour tous, qui serait évolutif et sur lequel je pourrai me
+                spécialiser.
+            </p>
+            <p>
+                Le développement web était donc le choix le plus logique selon mes
+                attentes.
+            </p>
+        </article>
+
+        <!-- article outils -->
+        <article id="tools">
+            <h2 class="intro_h2">Mes outils</h2>
+
+            <div id="tools_grid">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="/assets/images/html.png"
+                        alt="HTML5 logo" /></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="/assets/images/css3.png"
+                        alt="CSS3 logo" /></a>
+                <a href="https://www.javascript.com/"><img src="/assets/images/javascript.png"
+                        alt="JavaScript logo" /></a>
+                <a href="https://tailwindcss.com/"><img src="/assets/images/tailwind.png" alt="tailwind logo" /></a>
+                <a href="https://www.php.net/"><img src="/assets/images/bootstrap.png" alt="bootstrap logo" /></a>
+                <a href="https://tailwindcss.com/"><img src="/assets/images/php.png" alt="PHP logo" /></a>
+                <a href="https://www.sqlite.org/index.html"><img src="/assets/images/sql.png" alt="SQL logo" /></a>
+                <a href="https://www.mysql.com/"><img src="/assets/images/mySQL.png" alt="mySQL logo" /></a>
+                <a href="https://symfony.com/"><img src="/assets/images/symfony.png" alt="symphony logo" /></a>
+                <a href="https://code.visualstudio.com/"><img src="/assets/images/VScode.png" alt="VScode logo" /></a>
+                <a href="https://www.figma.com/"><img src="/assets/images/figma.png" alt="Figma logo" /></a>
+            </div>
+        </article>
+
+        <!-- email -->
+        <article class="email">
+            <form action="">
+                <h2>Me contacter</h2>
+                <p>N'hésitez pas à m'envoyer un petit message, je ferai de mon mieux pour vous répondre au plus vite.
+                </p>
+                
+                <!-- name -->
+                <label for="exampleInputEmail1" class="form-label">Nom</label>
+                <div class="form-floating">
+                    <input type="text" aria-label="First name" id="floatingInput" class="form-control"
+                        placeholder="ex: Dupont" required>
+                    <label for="floatingInput">ex: Dupont</label>
+                </div>
+                <label for="exampleInputEmail1" class="form-label">Prénom</label>
+                <div class="form-floating">
+                    <input type="text" aria-label="Last name" id="floatingInput" class="form-control"
+                        placeholder="ex: Jean" required>
+                    <label for="floatingInput">ex: Jean</label>
+                </div>
+                
+                <!-- email-->
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="ex: dupont@example.com"
+                        required>
+                    <label for="floatingInput">ex: dupont@example.com</label>
+                </div>
+                
+                <!-- message -->
+                <label for="exampleInputEmail1" class="form-label">Message</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Dites-moi... &#128522;</label>
+                </div>
+                <input class="btn btn-dark" type="submit" value="Submit">
+            </form>
+            <svg></svg>
+        </article>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
